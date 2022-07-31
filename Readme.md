@@ -3,7 +3,7 @@
 # Dance Home Page
 > HTML - CSS Project-14
 
-🙌 hey There I'm mangesh Thakre Wed Developer 
+🙌 hey There I'm mangesh Thakre Web Developer 
 ##  What I've learnd form this project 
 
  In this project i applied all the skill that i have gained till now 
