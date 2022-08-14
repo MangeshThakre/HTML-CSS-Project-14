@@ -125,15 +125,13 @@ nav > ul::before {
   font-weight: bolder;
   font-size: 1.1rem;
   cursor: pointer;
- transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
-.head > button:hover{
+.head > button:hover {
   background: transparent;
   border: solid 3px #333;
   color: #333;
 }
-
-
 
 .top-right {
   display: flex;
@@ -244,4 +242,130 @@ nav > ul::before {
 
 .arrow > img {
   width: 2.5rem;
+}
+
+/* hamburger */
+
+.hamburger-menu::before {
+  position: absolute;
+  content: "";
+  background: black;
+  width: 1.5rem;
+  height: 3px;
+  border-radius: 20px;
+  bottom: 6px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-menu {
+  display: none;
+  background: black;
+  width: 24px;
+  height: 3px;
+  border-radius: 20px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.hamburger-menu::after {
+  position: absolute;
+  content: "";
+  background: black;
+  width: 1.5rem;
+  height: 3px;
+  border-radius: 20px;
+  top: 6px;
+  transition: all 0.3s ease;
+}
+
+.cross-menu::before {
+  bottom: 0px;
+  transform: rotate(45deg);
+  transition: all 0.3s ease;
+}
+
+.cross-menu {
+  background: transparent;
+}
+
+.cross-menu::after {
+  transition: all 0.3s ease;
+  top: 0px;
+  transform: rotate(-45deg);
+}
+
+.buttoncontainer {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  nav {
+    padding: 45px 30px 0 30px;
+  }
+nav >img{
+  width: 6rem;
+}
+  nav > ul {
+    display: none;
+  }
+
+  .buttoncontainer {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .left {
+    display: none;
+  }
+
+
+/* right-side */
+.right-side{
+  left: 0;
+}
+
+  /* .head  */
+
+.head{
+  width: auto;
+}
+  
+  .head h1{
+  font-size: 3rem;
+  }
+
+  .head > div > h1{
+    margin: 0  0  0 3rem  ;
+  }
+
+  .head > div > p{
+    margin: 0;
+  }
+
+  .head > button {
+    float: unset;
+  }
+
+
+
+  /* top-right */
+  .top-right {
+    display: none;
+  }
+
+  .bottom {
+    flex-wrap: wrap-reverse;
+  }
+
+  .bottom-right {
+    margin: 0;
+  }
 }

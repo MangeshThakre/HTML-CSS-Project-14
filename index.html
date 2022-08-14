@@ -31,6 +31,10 @@
         <li>Profolio</li>
         <li>Contact</li>
       </ul>
+      <div class="buttoncontainer">
+        <div class ="hamburger-menu "> </div>
+
+       </div>
     </nav>
     <div class="left">
       <img src="./image/pexels-rfstudio-3819572.jpg" alt="" />
@@ -65,6 +69,9 @@
             <li>Illustration</li>
             <li>Animation</li>
           </ul>
+        
+       </div>
+
         </div>
         <div class="bottom-right">
           <h1><i class="fa-solid fa-quote-right"></i></h1>
@@ -83,5 +90,25 @@
     </div>
   </div>
 </div>
+
 </body>
+
+<script>
+
+  // const herocontainer = document.querySelector(".hero-container")
+  // const body = document.querySelector(".body")
+  // const sidebarMenu = document.querySelector(".close")
+  const buttoncontainer =document.querySelector(".buttoncontainer")
+  const burgermenu = document.querySelector(".hamburger-menu")
+  buttoncontainer.addEventListener('click' , (e)=>{
+    burgermenu.classList.toggle("cross-menu")
+    // sidebarMenu.classList.toggle("close")
+    // body.classList.toggle("hide-scroll")
+    // herocontainer.classList.toggle("shadow")
+
+  })
+
+</script>
+
+
 </html>
