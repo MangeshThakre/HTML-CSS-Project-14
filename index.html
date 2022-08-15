@@ -22,15 +22,17 @@
     <title>HTML-CSS-project-14</title>
     <script src="https://kit.fontawesome.com/55dbeb11c7.js" crossorigin="anonymous"></script>
   </head>
-  <body>
+  <body class ="body">
     <nav>
       <img src="./image/Logo.svg" alt="" />
-      <ul>
-        <li class="active">Home</li>
-        <li>About US</li>
-        <li>Profolio</li>
-        <li>Contact</li>
-      </ul>
+       <div class ="list-items">
+         <ul>
+           <li class="active">Home</li>
+           <li>About US</li>
+           <li>Profolio</li>
+           <li>Contact</li>
+          </ul>
+        </div>
       <div class="buttoncontainer">
         <div class ="hamburger-menu "> </div>
 
@@ -72,20 +74,20 @@
         
        </div>
 
+       <div class="bottom-right">
+         <h1><i class="fa-solid fa-quote-right"></i></h1>
+         <p>We help you to create the best graphics,<br>
+          photos, videos, animations and illustrations
+        </p>
+        <div class="bottom-right-img">
+          <img src="./image/pexels-cottonbro-7974875.jpg" alt="img">
         </div>
-        <div class="bottom-right">
-          <h1><i class="fa-solid fa-quote-right"></i></h1>
-             <p>We help you to create the best graphics,<br>
-             photos, videos, animations and illustrations
-            </p>
-            <div class="bottom-right-img">
-              <img src="./image/pexels-cottonbro-7974875.jpg" alt="img">
-            </div>
-
-          </div>
-          <div class="arrow">
-          <img src="./image/arrow.svg" alt="img">
-          </div>
+        
+      </div>
+      <div class="arrow">
+        <img src="./image/arrow.svg" alt="img">
+      </div>
+    </div>
       </div>
     </div>
   </div>
@@ -95,16 +97,16 @@
 
 <script>
 
-  // const herocontainer = document.querySelector(".hero-container")
-  // const body = document.querySelector(".body")
-  // const sidebarMenu = document.querySelector(".close")
+  const topRight = document.querySelector(".top-right")
+  const body = document.querySelector(".body")
+  const sidebarMenu = document.querySelector(".list-items")
   const buttoncontainer =document.querySelector(".buttoncontainer")
   const burgermenu = document.querySelector(".hamburger-menu")
   buttoncontainer.addEventListener('click' , (e)=>{
     burgermenu.classList.toggle("cross-menu")
-    // sidebarMenu.classList.toggle("close")
-    // body.classList.toggle("hide-scroll")
-    // herocontainer.classList.toggle("shadow")
+    sidebarMenu.classList.toggle("close")
+    body.classList.toggle("hide-scroll")
+    topRight.classList.toggle("show")
 
   })
 

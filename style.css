@@ -18,7 +18,7 @@ nav {
   align-items: center;
 }
 
-nav > ul {
+nav > div > ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,7 +27,7 @@ nav > ul {
   list-style-type: none;
   position: relative;
 }
-nav > ul > li {
+nav ul > li {
   height: 100%;
   width: 5rem;
   display: flex;
@@ -37,14 +37,14 @@ nav > ul > li {
   font-size: 14px;
 }
 
-nav > ul > li:hover,
+nav ul > li:hover,
 .active {
   font-weight: bolder;
   cursor: pointer;
   color: black;
 }
 
-nav > ul::before {
+nav ul::before {
   content: "";
   position: absolute;
   width: 22rem;
@@ -299,8 +299,12 @@ nav > ul::before {
 }
 
 @media (max-width: 500px) {
+  /* body */
   body {
     overflow: scroll;
+  }
+  .hide-scroll {
+    overflow: hidden;
   }
 
   nav {
@@ -309,8 +313,59 @@ nav > ul::before {
   nav > img {
     width: 6rem;
   }
-  nav > ul {
+  .list-items {
     display: none;
+  }
+
+  /* hamburger */
+
+  .close {
+    display: block;
+  }
+
+  .list-items {
+    position: absolute;
+    width: 100%;
+    background-color: #f5f2f0;
+    height: 100vh;
+    left: 0;
+    top: 100px;
+    z-index: 3;
+  }
+
+  nav > div > ul {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 5rem;
+    gap: 4rem;
+    position: relative;
+  }
+
+  nav ul::before {
+    content: "";
+    display: block;
+    background-color: #333333;
+    height: 3rem;
+    position: absolute;
+    width: 2rem;
+  }
+
+  /* top-right */
+  .top-right {
+    display: none;
+  }
+
+  .show {
+    display: block;
+    z-index: 3;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    top: 20rem;
   }
 
   .buttoncontainer {
@@ -346,7 +401,7 @@ nav > ul::before {
 
   .head h1 {
     font-size: 3rem;
-    margin: 3rem 0;
+    margin: 3rem 0 1rem 0;
   }
 
   .head > div > h1 {
@@ -359,22 +414,21 @@ nav > ul::before {
 
   .head > button {
     float: unset;
-    margin: 2rem auto;
+    margin: 4rem auto auto;
   }
 
   .bottom-right-img > img {
     width: 100%;
   }
 
-  /* top-right */
-  .top-right {
-    display: none;
+  .bottom {
+    flex-wrap: wrap;
   }
 
-  .bottom {
+  .bottom-left {
     position: absolute;
     top: 43rem;
-    margin: 7rem 2rem;
+    margin: 11rem 2rem;
   }
 
   .bottom-right {
@@ -383,10 +437,9 @@ nav > ul::before {
 
   .arrow {
     margin-left: 67%;
-    margin-top: 16rem;
+    margin-top: 10rem;
   }
   .arrow > img {
     width: 1.5rem;
   }
-  
 }
