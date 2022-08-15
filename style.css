@@ -299,12 +299,16 @@ nav > ul::before {
 }
 
 @media (max-width: 500px) {
+  body {
+    overflow: scroll;
+  }
+
   nav {
     padding: 45px 30px 0 30px;
   }
-nav >img{
-  width: 6rem;
-}
+  nav > img {
+    width: 6rem;
+  }
   nav > ul {
     display: none;
   }
@@ -326,35 +330,41 @@ nav >img{
     display: none;
   }
 
-
-/* right-side */
-.right-side{
-  left: 0;
-}
+  /* right-side */
+  .right-side {
+    left: 0;
+  }
 
   /* .head  */
 
-.head{
-  width: auto;
-}
-  
-  .head h1{
-  font-size: 3rem;
+  .head {
+    width: auto;
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
   }
 
-  .head > div > h1{
-    margin: 0  0  0 3rem  ;
+  .head h1 {
+    font-size: 3rem;
+    margin: 3rem 0;
   }
 
-  .head > div > p{
+  .head > div > h1 {
+    margin: 0 0 0 3rem;
+  }
+
+  .head > div > p {
     margin: 0;
   }
 
   .head > button {
     float: unset;
+    margin: 2rem auto;
   }
 
-
+  .bottom-right-img > img {
+    width: 100%;
+  }
 
   /* top-right */
   .top-right {
@@ -362,10 +372,21 @@ nav >img{
   }
 
   .bottom {
-    flex-wrap: wrap-reverse;
+    position: absolute;
+    top: 43rem;
+    margin: 7rem 2rem;
   }
 
   .bottom-right {
-    margin: 0;
+    margin: 0 2rem;
   }
+
+  .arrow {
+    margin-left: 67%;
+    margin-top: 16rem;
+  }
+  .arrow > img {
+    width: 1.5rem;
+  }
+  
 }
